@@ -8,7 +8,7 @@ const ok = function (req, res) {
   return res.send('ok')
 }
 const r = function (req, res) {
-  res.json({ url: req.url, body : req.body });
+  res.json({ url: req.url, headers: req.headers, body : req.body });
 }
 app.get('*', r);
 app.get('/ok', ok);
